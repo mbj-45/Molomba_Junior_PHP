@@ -36,9 +36,13 @@ function db_connect(): PDO
  * Fonction qui permet de récupérer le tableau des enregistrements de la table des liens
  * @return array
  */
-function get_all_link()
-{
-    // TODO implement function
+function get_all_link() {
+    $array = [
+        $title = ["title" => $_POST["title"]];
+        $url = ["url" => $_POST["url"]];    
+    ]
+
+    return $array;
 }
 
 
@@ -47,9 +51,11 @@ function get_all_link()
  * @param integer $link_id
  * @return array
  */
-function get_link_by_id($link_id)
-{
-    // TODO implement function
+function get_link_by_id($link_id) {
+    for ($link_id = 0; $link_id < count($title) ; $link_id++) { 
+        $array_id = [$link_id]
+    }
+    return $array_id;
 }
 
 
@@ -58,9 +64,9 @@ function get_link_by_id($link_id)
  * @param array $data: ['link_id' => 1, 'title' => 'MDN', 'url' => 'https://developer.mozilla.org/fr/']
  * @return bool
  */
-function update_link($data)
-{
-    // TODO implement function
+function update_link($data) {
+    $array = [$lik_id, $title, $url]
+    
 }
 
 
@@ -79,7 +85,9 @@ function create_link($data)
  *@param integer $link_id
  * @return bool
  */
-function delete_link($link_id)
-{
-    // TODO implement function
+function delete_link($link_id) {
+    unset();
+    
 }
+
+?>
